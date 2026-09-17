@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Convert Image to Vinyl Cutting File (SVG) | Make It</title>
+<meta name="description" content="Upload a logo, sticker or lettering design and convert it into clean SVG cutting paths for your vinyl cutter — background removed and simplified automatically.">
+<link rel="canonical" href="https://makeit.tools/image-to-vinyl/">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Convert Image to Vinyl Cutting File (SVG) | Make It">
+<meta property="og:description" content="Upload a logo, sticker or lettering design and convert it into clean SVG cutting paths for your vinyl cutter — background removed and simplified automatically.">
+<meta property="og:url" content="https://makeit.tools/image-to-vinyl/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Convert Image to Vinyl Cutting File (SVG) | Make It">
+<meta name="twitter:description" content="Upload a logo, sticker or lettering design and convert it into clean SVG cutting paths for your vinyl cutter — background removed and simplified automatically.">
+<link rel="stylesheet" href="/assets/css/style.css?v=20260917">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Image to Vinyl Cutter Converter",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": "Background removal, vectorization, small-element removal, SVG export for vinyl plotters",
+  "description": "Image to Vinyl is a free browser-based tool that converts PNG, JPG, WEBP and SVG images into clean SVG cutting paths for vinyl cutters, with automatic background removal. No account is required and processing happens locally in your browser."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Make It",
+      "item": "https://makeit.tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Convert Image to a Vinyl Cutting File",
+      "item": "https://makeit.tools/image-to-vinyl/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to prepare a design for vinyl cutting",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Upload your image",
+      "text": "Upload a logo, sticker design or lettering \u2014 PNG, JPG, WEBP or SVG."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Clean up the cut lines",
+      "text": "Remove the background, adjust threshold and remove small stray elements."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Download your SVG",
+      "text": "Preview the cutting paths, then download the SVG for your vinyl cutter software."
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which programs can open the SVG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any vinyl cutting software that imports SVG, including Cricut Design Space, Silhouette Studio and Brother Canvas Workspace."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it remove the background for me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, automatically, using edge-based color sampling \u2014 you can turn it off if you prefer to control the shape manually."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I cut multi-color designs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool outputs a single set of cut paths per file. For multi-layer designs, process each color separately and align the layers in your cutter software."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the SVG sized correctly for cutting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The SVG uses relative proportions from your image; resize it precisely inside your cutter software before cutting."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="brand"><span class="mark">M</span> Make It</a>
+    <nav class="nav-links">
+      <a href="/image-to-stl/">3D Print</a>
+      <a href="/image-to-laser-cut/">Laser Cut</a>
+      <a href="/image-to-stencil/">Stencil</a>
+      <a href="/how-it-works/">How it works</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap"><p class="breadcrumbs"><a href="/">Make It</a> / Convert Image to a Vinyl Cutting File</p></div>
+
+  <section class="hero" style="padding-top:14px;">
+    <div class="wrap">
+      <h1>Convert Image to a Vinyl Cutting File</h1>
+      <p class="direct-answer" style="margin-left:auto;margin-right:auto;">Upload a logo, sticker or lettering design and this tool removes the background, vectorizes the shape and simplifies the paths into a clean SVG ready to bring into your vinyl cutter’s software (Cricut Design Space, Silhouette Studio and similar all import SVG).</p>
+    </div>
+  </section>
+
+  <div class="wrap app-shell">
+    <div id="app-root"></div>
+  </div>
+
+  <div class="wrap"><div class="ad-slot ad-slot-banner">ADVERTISEMENT</div></div>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>How to prepare a design for vinyl cutting</h2>
+      <div class="steps-grid">
+        <div class="step-card"><span class="step-num">1</span><h3>Upload your image</h3><p>Upload a logo, sticker design or lettering — PNG, JPG, WEBP or SVG.</p></div>
+        <div class="step-card"><span class="step-num">2</span><h3>Clean up the cut lines</h3><p>Remove the background, adjust threshold and remove small stray elements.</p></div>
+        <div class="step-card"><span class="step-num">3</span><h3>Download your SVG</h3><p>Preview the cutting paths, then download the SVG for your vinyl cutter software.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>What can you make?</h2>
+      <div class="usecase-list">
+        <span>Decals</span>
+        <span>Stickers</span>
+        <span>Lettering</span>
+        <span>Silhouette cutouts</span>
+        <span>Car window graphics</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>File specifications</h2>
+      <table class="spec-table">
+        <tr><td>Output format</td><td>SVG</td></tr>
+        <tr><td>Path type</td><td>Simplified outline paths</td></tr>
+        <tr><td>Background removal</td><td>Automatic, based on edge color sampling</td></tr>
+        <tr><td>Processing</td><td>Runs entirely in your browser</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Tips for better results</h2>
+      <ul class="tips-list">
+        <li>Simple silhouettes and bold lettering cut most reliably.</li>
+        <li>Use "Remove small details" to drop tiny specks that would otherwise become fiddly micro-cuts.</li>
+        <li>Weed-test a small area first when working with fine detail.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Frequently asked questions</h2>
+      <details class="faq-item">
+        <summary>Which programs can open the SVG?</summary>
+        <p>Any vinyl cutting software that imports SVG, including Cricut Design Space, Silhouette Studio and Brother Canvas Workspace.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does it remove the background for me?</summary>
+        <p>Yes, automatically, using edge-based color sampling — you can turn it off if you prefer to control the shape manually.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I cut multi-color designs?</summary>
+        <p>This tool outputs a single set of cut paths per file. For multi-layer designs, process each color separately and align the layers in your cutter software.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is the SVG sized correctly for cutting?</summary>
+        <p>The SVG uses relative proportions from your image; resize it precisely inside your cutter software before cutting.</p>
+      </details>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="ad-slot ad-slot-incontent">ADVERTISEMENT</div></div>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Related tools</h2>
+      <div class="related-tools">
+      <a href="/image-to-svg/">Image to SVG</a>
+      <a href="/image-to-stencil/">Image to Stencil</a>
+      <a href="/image-to-laser-cut/">Image to Laser Cut</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="brand" style="margin-bottom:10px;"><span class="mark">M</span> Make It</div>
+      <p style="max-width:320px;font-size:13px;">Make It is a collection of free browser-based tools for turning images and designs into files for digital fabrication.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/about/">About</a>
+      <a href="/how-it-works/">How it works</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+      <a href="/examples/">Examples</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  </div>
+  <div class="wrap footer-note">&copy; <span id="year"></span> Make It. All processing happens in your browser unless stated otherwise.</div>
+</footer>
+
+<script src="/assets/js/core/geometry.js?v=20260917"></script>
+<script src="/assets/js/core/imageProcessing.js?v=20260917"></script>
+<script src="/assets/js/core/mesh3d.js?v=20260917"></script>
+<script src="/assets/js/core/exportSVG.js?v=20260917"></script>
+<script src="/assets/js/core/exportDXF.js?v=20260917"></script>
+<script src="/assets/js/core/exportZip.js?v=20260917"></script>
+<script src="/assets/js/core/export3MF.js?v=20260917"></script>
+<script src="/assets/js/core/exportSTL.js?v=20260917"></script>
+<script src="/assets/js/core/exportPDF.js?v=20260917"></script>
+<script src="/assets/js/core/exportPNG.js?v=20260917"></script>
+<script src="/assets/js/preview3d.js?v=20260917"></script>
+<script src="/assets/js/app.js?v=20260917"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  window.MI.App.mount(document.getElementById('app-root'), { mode: 'vinyl' });
+</script>
+</body>
+</html>

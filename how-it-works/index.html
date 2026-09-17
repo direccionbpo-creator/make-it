@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Make It Works</title>
+<meta name="description" content="How Make It converts an image into a fabrication-ready file, entirely in your browser: upload, choose a manufacturing method, adjust, download.">
+<link rel="canonical" href="https://makeit.tools/how-it-works/">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/style.css?v=20260917">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="brand"><span class="mark">M</span> Make It</a>
+    <nav class="nav-links">
+      <a href="/image-to-stl/">3D Print</a>
+      <a href="/image-to-laser-cut/">Laser Cut</a>
+      <a href="/image-to-stencil/">Stencil</a>
+      <a href="/how-it-works/">How it works</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap"><p class="breadcrumbs"><a href="/">Make It</a> / How it works</p></div>
+  <section class="hero" style="padding-top:14px;">
+    <div class="wrap">
+      <h1>How Make It works</h1>
+      <p class="direct-answer" style="margin-left:auto;margin-right:auto;">Upload an image, choose what to make, and download a real fabrication file. Every processing step runs in your browser using canvas and WebGL — no upload, no account, no install.</p>
+    </div>
+  </section>
+
+  <section class="section" style="border-top:none;">
+    <div class="wrap">
+      <div class="steps-grid">
+        <div class="step-card"><span class="step-num">1</span><h3>Upload</h3><p>Drop a PNG, JPG, WEBP or SVG, choose a file, or paste an image from your clipboard. The image is decoded straight into an in-memory canvas — it is never sent to a server.</p></div>
+        <div class="step-card"><span class="step-num">2</span><h3>Choose</h3><p>Pick a manufacturing method: 3D print, laser cut, laser engrave, CNC, vinyl cutter or stencil. Each shares the same underlying image pipeline with different defaults and outputs.</p></div>
+        <div class="step-card"><span class="step-num">3</span><h3>Adjust</h3><p>Background removal, threshold, detail, smoothing and real-world dimensions update the live preview instantly as you move each slider.</p></div>
+        <div class="step-card"><span class="step-num">4</span><h3>Download</h3><p>The download button builds the real output file — binary STL, zipped 3MF, SVG, DXF, PDF or PNG — from the exact geometry shown in the preview.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap" style="max-width:760px;">
+      <h2>What actually happens to your image</h2>
+      <p>Every tool follows roughly the same pipeline: the image is converted to grayscale, optionally cleaned with automatic background removal, thresholded into a black/white shape, and cleaned of small speckles. For vector outputs (SVG, DXF, laser, CNC, vinyl, stencil), that shape is traced into polygon contours, simplified and smoothed. For 3D outputs, the shape (and, in Relief mode, its grayscale detail) is converted into a height grid and meshed into a solid, watertight object.</p>
+      <p>Every one of those steps is plain JavaScript running against a <code>&lt;canvas&gt;</code> element in your browser. There is no server-side image processing anywhere on this site.</p>
+      <h2 style="margin-top:28px;">Where it can't be 100% local</h2>
+      <p>It can't, today — every tool on this site processes entirely client-side. If that ever changes for a future tool, this page and the tool's own page will say so explicitly rather than assume you'll notice.</p>
+      <p style="margin-top:24px;"><a href="/privacy/">Read the full privacy approach →</a></p>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="brand" style="margin-bottom:10px;"><span class="mark">M</span> Make It</div>
+      <p style="max-width:320px;font-size:13px;">Make It is a collection of free browser-based tools for turning images and designs into files for digital fabrication.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/about/">About</a>
+      <a href="/how-it-works/">How it works</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+      <a href="/examples/">Examples</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  </div>
+  <div class="wrap footer-note">© <span id="year"></span> Make It. All processing happens in your browser unless stated otherwise.</div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

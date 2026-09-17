@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Convert Image to Laser Cut File (SVG/DXF) | Make It</title>
+<meta name="description" content="Upload a logo or image and get clean, closed vector paths ready for laser cutting — background removed, contours simplified, sized in millimeters. Download SVG or DXF.">
+<link rel="canonical" href="https://makeit.tools/image-to-laser-cut/">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Convert Image to Laser Cut File (SVG/DXF) | Make It">
+<meta property="og:description" content="Upload a logo or image and get clean, closed vector paths ready for laser cutting — background removed, contours simplified, sized in millimeters. Download SVG or DXF.">
+<meta property="og:url" content="https://makeit.tools/image-to-laser-cut/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Convert Image to Laser Cut File (SVG/DXF) | Make It">
+<meta name="twitter:description" content="Upload a logo or image and get clean, closed vector paths ready for laser cutting — background removed, contours simplified, sized in millimeters. Download SVG or DXF.">
+<link rel="stylesheet" href="/assets/css/style.css?v=20260917">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Image to Laser Cut Converter",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": "Background removal, contour detection, path simplification, real-world mm sizing, SVG and DXF export",
+  "description": "Image to Laser Cut is a free browser-based tool that converts PNG, JPG, WEBP and SVG images into clean, closed vector cut paths for laser cutting, exported as SVG or DXF. No account is required and processing happens locally in your browser."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Make It",
+      "item": "https://makeit.tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Convert Image to a Laser Cutting File",
+      "item": "https://makeit.tools/image-to-laser-cut/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to prepare an image for laser cutting",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Upload your image",
+      "text": "Upload a PNG, JPG, WEBP or SVG logo or drawing."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Clean up the cut paths",
+      "text": "Remove the background, adjust threshold and simplify the contours, then set the real cutting size in millimeters."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Download your file",
+      "text": "Preview the closed cut paths, then download SVG or DXF for your laser software."
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I set the exact cutting size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes \u2014 set width and height in millimeters and the exported file matches that physical size."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "SVG or DXF \u2014 which should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both carry the same paths. Use whichever your laser cutter\u2019s software imports more reliably; DXF is common for industrial/CAM software, SVG for hobby lasers and design tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it remove the background automatically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, background removal is on by default and can be toggled off if your image already has a transparent or solid background."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can this generate different colors for different cut/score passes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not yet \u2014 this tool outputs a single set of cut paths. Multi-pass color-coded layers are on the roadmap."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="brand"><span class="mark">M</span> Make It</a>
+    <nav class="nav-links">
+      <a href="/image-to-stl/">3D Print</a>
+      <a href="/image-to-laser-cut/">Laser Cut</a>
+      <a href="/image-to-stencil/">Stencil</a>
+      <a href="/how-it-works/">How it works</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap"><p class="breadcrumbs"><a href="/">Make It</a> / Convert Image to a Laser Cutting File</p></div>
+
+  <section class="hero" style="padding-top:14px;">
+    <div class="wrap">
+      <h1>Convert Image to a Laser Cutting File</h1>
+      <p class="direct-answer" style="margin-left:auto;margin-right:auto;">Upload a logo, drawing or image and this tool removes the background, detects contours, vectorizes and simplifies them into clean closed paths — set the exact width and height in millimeters, preview the cut lines, and download SVG or DXF ready to bring into your laser cutter’s software.</p>
+    </div>
+  </section>
+
+  <div class="wrap app-shell">
+    <div id="app-root"></div>
+  </div>
+
+  <div class="wrap"><div class="ad-slot ad-slot-banner">ADVERTISEMENT</div></div>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>How to prepare an image for laser cutting</h2>
+      <div class="steps-grid">
+        <div class="step-card"><span class="step-num">1</span><h3>Upload your image</h3><p>Upload a PNG, JPG, WEBP or SVG logo or drawing.</p></div>
+        <div class="step-card"><span class="step-num">2</span><h3>Clean up the cut paths</h3><p>Remove the background, adjust threshold and simplify the contours, then set the real cutting size in millimeters.</p></div>
+        <div class="step-card"><span class="step-num">3</span><h3>Download your file</h3><p>Preview the closed cut paths, then download SVG or DXF for your laser software.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>What can you make?</h2>
+      <div class="usecase-list">
+        <span>Logos and signage</span>
+        <span>Wooden name plates</span>
+        <span>Layered artwork</span>
+        <span>Gift tags and ornaments</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>File specifications</h2>
+      <table class="spec-table">
+        <tr><td>Output formats</td><td>SVG and DXF (AC1015/LWPOLYLINE)</td></tr>
+        <tr><td>Path type</td><td>Closed outline paths, sized to your chosen mm dimensions</td></tr>
+        <tr><td>Fill</td><td>Outline only by default — enable "Filled shape" if your software needs a filled path</td></tr>
+        <tr><td>Processing</td><td>Runs entirely in your browser</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Tips for better results</h2>
+      <ul class="tips-list">
+        <li>High-contrast, simple shapes cut the cleanest lines.</li>
+        <li>Raise "Remove small details" to avoid tiny stray paths the laser would otherwise try to cut.</li>
+        <li>Always verify the millimeter dimensions in your laser software before cutting.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Frequently asked questions</h2>
+      <details class="faq-item">
+        <summary>Can I set the exact cutting size?</summary>
+        <p>Yes — set width and height in millimeters and the exported file matches that physical size.</p>
+      </details>
+      <details class="faq-item">
+        <summary>SVG or DXF — which should I use?</summary>
+        <p>Both carry the same paths. Use whichever your laser cutter’s software imports more reliably; DXF is common for industrial/CAM software, SVG for hobby lasers and design tools.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does it remove the background automatically?</summary>
+        <p>Yes, background removal is on by default and can be toggled off if your image already has a transparent or solid background.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can this generate different colors for different cut/score passes?</summary>
+        <p>Not yet — this tool outputs a single set of cut paths. Multi-pass color-coded layers are on the roadmap.</p>
+      </details>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="ad-slot ad-slot-incontent">ADVERTISEMENT</div></div>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Related tools</h2>
+      <div class="related-tools">
+      <a href="/image-to-svg/">Image to SVG</a>
+      <a href="/image-to-dxf/">Image to DXF</a>
+      <a href="/image-to-cnc/">Image to CNC</a>
+      <a href="/image-to-vinyl/">Image to Vinyl</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="brand" style="margin-bottom:10px;"><span class="mark">M</span> Make It</div>
+      <p style="max-width:320px;font-size:13px;">Make It is a collection of free browser-based tools for turning images and designs into files for digital fabrication.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/about/">About</a>
+      <a href="/how-it-works/">How it works</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+      <a href="/examples/">Examples</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  </div>
+  <div class="wrap footer-note">&copy; <span id="year"></span> Make It. All processing happens in your browser unless stated otherwise.</div>
+</footer>
+
+<script src="/assets/js/core/geometry.js?v=20260917"></script>
+<script src="/assets/js/core/imageProcessing.js?v=20260917"></script>
+<script src="/assets/js/core/mesh3d.js?v=20260917"></script>
+<script src="/assets/js/core/exportSVG.js?v=20260917"></script>
+<script src="/assets/js/core/exportDXF.js?v=20260917"></script>
+<script src="/assets/js/core/exportZip.js?v=20260917"></script>
+<script src="/assets/js/core/export3MF.js?v=20260917"></script>
+<script src="/assets/js/core/exportSTL.js?v=20260917"></script>
+<script src="/assets/js/core/exportPDF.js?v=20260917"></script>
+<script src="/assets/js/core/exportPNG.js?v=20260917"></script>
+<script src="/assets/js/preview3d.js?v=20260917"></script>
+<script src="/assets/js/app.js?v=20260917"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  window.MI.App.mount(document.getElementById('app-root'), { mode: 'laserCut' });
+</script>
+</body>
+</html>

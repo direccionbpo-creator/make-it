@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Convert Image to CNC Contours (DXF/SVG) | Make It</title>
+<meta name="description" content="Upload a logo or drawing and generate clean outer and inner contours for CNC routing — sized in millimeters, exported as DXF or SVG for your CAM software.">
+<link rel="canonical" href="https://makeit.tools/image-to-cnc/">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Convert Image to CNC Contours (DXF/SVG) | Make It">
+<meta property="og:description" content="Upload a logo or drawing and generate clean outer and inner contours for CNC routing — sized in millimeters, exported as DXF or SVG for your CAM software.">
+<meta property="og:url" content="https://makeit.tools/image-to-cnc/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Convert Image to CNC Contours (DXF/SVG) | Make It">
+<meta name="twitter:description" content="Upload a logo or drawing and generate clean outer and inner contours for CNC routing — sized in millimeters, exported as DXF or SVG for your CAM software.">
+<link rel="stylesheet" href="/assets/css/style.css?v=20260917">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Image to CNC Converter",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": "Outer/inner contour detection, path simplification and smoothing, real-world mm sizing, DXF and SVG export",
+  "description": "Image to CNC is a free browser-based tool that converts PNG, JPG, WEBP and SVG images into clean outer/inner contours for CNC workflows, exported as DXF or SVG. No account is required and processing happens locally in your browser."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Make It",
+      "item": "https://makeit.tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Convert Image to CNC-Ready Contours",
+      "item": "https://makeit.tools/image-to-cnc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to prepare an image for CNC",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Upload your image",
+      "text": "Upload a logo or drawing \u2014 PNG, JPG, WEBP or SVG."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Set contours and size",
+      "text": "Choose whether to include inner contours, simplify the paths, and set the real size in millimeters."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Download your file",
+      "text": "Preview the contours, then download DXF or SVG for your CAM software."
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does this generate G-code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It generates clean vector contours (DXF/SVG) that you import into CAM software, which then generates toolpaths and G-code for your specific machine, tool and material."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I exclude interior holes from the contour?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes \u2014 turn off \"Include inner contours\" to keep only the outer boundary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will the DXF work with my CAM software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The DXF uses the common AutoCAD 2000/LWPOLYLINE format most CAM software can import, but always verify compatibility with your specific software."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I set the physical cutting size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes \u2014 width and height in millimeters, matched exactly in the exported file."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="brand"><span class="mark">M</span> Make It</a>
+    <nav class="nav-links">
+      <a href="/image-to-stl/">3D Print</a>
+      <a href="/image-to-laser-cut/">Laser Cut</a>
+      <a href="/image-to-stencil/">Stencil</a>
+      <a href="/how-it-works/">How it works</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap"><p class="breadcrumbs"><a href="/">Make It</a> / Convert Image to CNC-Ready Contours</p></div>
+
+  <section class="hero" style="padding-top:14px;">
+    <div class="wrap">
+      <h1>Convert Image to CNC-Ready Contours</h1>
+      <p class="direct-answer" style="margin-left:auto;margin-right:auto;">Upload a logo or drawing and this tool vectorizes it into clean outer and inner contours sized to real millimeters. The generated DXF/SVG contains geometry that can be imported into compatible CAM software — it does not generate G-code, since toolpaths depend on your machine, tool and material.</p>
+    </div>
+  </section>
+
+  <div class="wrap app-shell">
+    <div id="app-root"></div>
+  </div>
+
+  <div class="wrap"><div class="ad-slot ad-slot-banner">ADVERTISEMENT</div></div>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>How to prepare an image for CNC</h2>
+      <div class="steps-grid">
+        <div class="step-card"><span class="step-num">1</span><h3>Upload your image</h3><p>Upload a logo or drawing — PNG, JPG, WEBP or SVG.</p></div>
+        <div class="step-card"><span class="step-num">2</span><h3>Set contours and size</h3><p>Choose whether to include inner contours, simplify the paths, and set the real size in millimeters.</p></div>
+        <div class="step-card"><span class="step-num">3</span><h3>Download your file</h3><p>Preview the contours, then download DXF or SVG for your CAM software.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>What can you make?</h2>
+      <div class="usecase-list">
+        <span>Routed signs</span>
+        <span>Inlay templates</span>
+        <span>Carved panels</span>
+        <span>Reference contours for CAM toolpaths</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>File specifications</h2>
+      <table class="spec-table">
+        <tr><td>Output formats</td><td>DXF (AC1015/LWPOLYLINE) and SVG</td></tr>
+        <tr><td>Contours</td><td>Outer boundary, with optional inner contours</td></tr>
+        <tr><td>G-code</td><td>Not generated — import the contours into your CAM software to create toolpaths</td></tr>
+        <tr><td>Processing</td><td>Runs entirely in your browser</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Tips for better results</h2>
+      <ul class="tips-list">
+        <li>Turn off inner contours if your CAM software only needs the outer boundary.</li>
+        <li>Simplify aggressively for router bits that cannot follow fine detail.</li>
+        <li>Double-check the imported scale in your CAM software before cutting.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Frequently asked questions</h2>
+      <details class="faq-item">
+        <summary>Does this generate G-code?</summary>
+        <p>No. It generates clean vector contours (DXF/SVG) that you import into CAM software, which then generates toolpaths and G-code for your specific machine, tool and material.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I exclude interior holes from the contour?</summary>
+        <p>Yes — turn off "Include inner contours" to keep only the outer boundary.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Will the DXF work with my CAM software?</summary>
+        <p>The DXF uses the common AutoCAD 2000/LWPOLYLINE format most CAM software can import, but always verify compatibility with your specific software.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I set the physical cutting size?</summary>
+        <p>Yes — width and height in millimeters, matched exactly in the exported file.</p>
+      </details>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="ad-slot ad-slot-incontent">ADVERTISEMENT</div></div>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Related tools</h2>
+      <div class="related-tools">
+      <a href="/image-to-dxf/">Image to DXF</a>
+      <a href="/image-to-laser-cut/">Image to Laser Cut</a>
+      <a href="/image-to-svg/">Image to SVG</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="brand" style="margin-bottom:10px;"><span class="mark">M</span> Make It</div>
+      <p style="max-width:320px;font-size:13px;">Make It is a collection of free browser-based tools for turning images and designs into files for digital fabrication.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/about/">About</a>
+      <a href="/how-it-works/">How it works</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+      <a href="/examples/">Examples</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  </div>
+  <div class="wrap footer-note">&copy; <span id="year"></span> Make It. All processing happens in your browser unless stated otherwise.</div>
+</footer>
+
+<script src="/assets/js/core/geometry.js?v=20260917"></script>
+<script src="/assets/js/core/imageProcessing.js?v=20260917"></script>
+<script src="/assets/js/core/mesh3d.js?v=20260917"></script>
+<script src="/assets/js/core/exportSVG.js?v=20260917"></script>
+<script src="/assets/js/core/exportDXF.js?v=20260917"></script>
+<script src="/assets/js/core/exportZip.js?v=20260917"></script>
+<script src="/assets/js/core/export3MF.js?v=20260917"></script>
+<script src="/assets/js/core/exportSTL.js?v=20260917"></script>
+<script src="/assets/js/core/exportPDF.js?v=20260917"></script>
+<script src="/assets/js/core/exportPNG.js?v=20260917"></script>
+<script src="/assets/js/preview3d.js?v=20260917"></script>
+<script src="/assets/js/app.js?v=20260917"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  window.MI.App.mount(document.getElementById('app-root'), { mode: 'cnc' });
+</script>
+</body>
+</html>
